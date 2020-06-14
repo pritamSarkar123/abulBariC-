@@ -10,7 +10,7 @@ int main(){
 		cout<<"Multiplication Not possible!"<<endl;
 		return 0;
 	}
-	int A[R1][C1],B[R2][C2],C[R1][C2];
+	int A[R1][C1],B[R2][C2],C[R1][C2]={0};
 	//making C[R1][C2]={0} will not work here leads to garbage value in fucking WINDOWS
 	//do it in linux and u will get correct ans
 	cout<<"Enter "<<R1*C1<<" values:"<<endl;
@@ -27,7 +27,6 @@ int main(){
 	}
 	for(int i=0;i<R1;i++){
 		for(int j=0;j<C2;j++){
-			C[i][j]=0;
 			for(int k=0;k<C1;k++){
 				C[i][j]+=A[i][k]*B[k][j];
 			}
