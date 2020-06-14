@@ -11,7 +11,8 @@ int main(){
 		return 0;
 	}
 	int A[R1][C1],B[R2][C2],C[R1][C2];
-	//making C[R1][C2]={0} will not work here leads to garbage value
+	//making C[R1][C2]={0} will not work here leads to garbage value in fucking WINDOWS
+	//do it in linux and u will get correct ans
 	cout<<"Enter "<<R1*C1<<" values:"<<endl;
 	for(auto &x:A){
 		for(auto &y:x){
