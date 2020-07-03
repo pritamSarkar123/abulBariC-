@@ -22,9 +22,9 @@ class Item{
 
 int main(){
     int n;
-    string name;
-    double price;
-    int quantity;
+    string name="";
+    double price=0;
+    int quantity=0;
     vector<Item *> list;
     cout<<"Enter number of emements u want together"<<endl;
     cin>>n;
@@ -49,11 +49,7 @@ int main(){
     }
     return 0;
 }
-Item::Item(){
-    name="";
-    price=0;
-    quantity=0;
-}
+Item::Item():Item("",0,0){}
 Item::Item(string n,double p,int q){
     name=n;
     price=p;
