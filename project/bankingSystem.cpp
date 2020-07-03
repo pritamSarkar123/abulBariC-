@@ -25,10 +25,10 @@ class Account{
         Account(string firstName,string lastName,long double balance);
         //inlined
         Account(){};
-        string getFirstName(){return firstName;};
-        string getLastName(){return lastName;};
-        long long getAccountNumber(){return accountNumber;};
-        long double getBalance(){return balance;};
+        string getFirstName(){return firstName;}
+        string getLastName(){return lastName;}
+        long long getAccountNumber(){return accountNumber;}
+        long double getBalance(){return balance;}
         //seperrately declared
         void diposit(long double amount);
         void withdrawl(long double amount);
