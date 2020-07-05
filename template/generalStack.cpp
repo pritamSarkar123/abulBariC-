@@ -16,6 +16,9 @@ class Stack{
 		T pop();
 		void showStack();
 		void removeStack();
+		~Stack(){
+			delete []stack;
+		}
 };
 template<class T>
 void Stack<T>::push(T x){
