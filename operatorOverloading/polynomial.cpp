@@ -35,7 +35,7 @@ int Poly::value(int x){
     return sum;
 }
 Poly Poly::operator+(Poly &p){
-    Poly *ptr=new Poly(max(n,p.n));
+    Poly *ptr=new Poly(max(n,p.n)+1);
     int i=0,j=0,k=0;
     while(i<n && j<p.n){
         if(t[i].exp>p.t[j].exp) ptr->t[k++]=t[i++];
@@ -45,8 +45,8 @@ Poly Poly::operator+(Poly &p){
             ptr->t[k++].coeff=t[i++].coeff+p.t[j++].coeff;
         }
     }
-    while(i<n) ptr->t[k++]=t[i++];
-    while(j<p.n) ptr->t[k++]=p.t[j++];
+    while(i<n) ptr->t[k++]=t[i++]; 
+    while(j<p.n) ptr->t[k++]=p.t[j++]; 
     return *ptr;
 }
 istream & operator >> (istream &is,Poly &p){
@@ -57,17 +57,18 @@ istream & operator >> (istream &is,Poly &p){
     return is;
 }
 ostream & operator << (ostream &os,Poly &p){
+    cout<<p.n<<endl;
     for(int i=0;i<p.n;i++){
         os<<p.t[i].coeff<<" "<<p.t[i].exp<<endl;
     }
     return os;
 }
 int main(){
-    Poly p1(3),p2(3),p3(3);
+    Poly p1(3),p2(3);
     cin>>p1;
-    // cin>>p2;
+    cin>>p2;
     cout<<p1.value(5)<<endl;
-    // p3=p2+p1;
-    // cout<<p3;
+    Poly p3=p2+p1;
+    cout<<p3;
     return 0;
 }
